@@ -14,3 +14,6 @@
 Route::get('admin', function () {
     return view('starter');
 });
+Route::Group(['prefix'=>'web', 'namespace' => 'Web'], function (){
+    Route::get('/', 'IndexController@index');
+});
